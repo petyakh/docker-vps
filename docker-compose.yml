@@ -14,7 +14,7 @@ services:
             # тека з веб-проектами
             - /mnt/Plus/WWW:/var/www/
             # логи nginx
-            - /mnt/Plus/nginx-log:/var/log/nginx
+            - /mnt/Plus/nginx-logs:/var/log/nginx
         #logging:
         #    options:
         #        max-size: 1g
