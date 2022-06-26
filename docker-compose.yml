@@ -7,14 +7,14 @@ services:
         container_name: nginx
         ports:
             - "80:80"
-            - “443:443”
+            - "443:443"
         volumes:
-            # переносимо nginx.conf sites-available
-            - /mnt/Plus/nginx:/etc/nginx/
-            # тека з веб-проектами
-            - /mnt/Plus/WWW:/var/www/
-            # логи nginx
-            - /mnt/Plus/nginx-logs:/var/log/nginx
+            # nginx configs
+            - ./nginx/conf.d:/etc/nginx/conf.d
+            # projects folder
+            - ./WWW:/var/www/
+            # nginx logs
+            - ./nginx-logs:/var/log/nginx
         #logging:
         #    options:
         #        max-size: 1g
